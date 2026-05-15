@@ -1,0 +1,14 @@
+{
+    "data_hora_inicio": "2026-05-15 14:03:55",
+    "modelo_utilizado": "llama3",
+    "historico_conversa": [
+        {
+            "autor": "Usuário",
+            "mensagem": "pode me mostrar como fazer 25% de 87.99"
+        },
+        {
+            "autor": "Eve",
+            "mensagem": "Eve. Para calcular 25% de 87.99, você precisa multiplicar o valor pela fração 0.25 (ou 1/4). Nesse caso:\n\n87.99 x 0.25 = 21.99\n\nResposta: 21.99."
+        }
+    ]
+}

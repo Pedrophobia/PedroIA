@@ -7,10 +7,27 @@ from rich.markdown import Markdown
 import os
 import json
 from datetime import datetime
+#import para o ping 
+import sys
+import urllib.request
+
+
 
 # inicializador
 llm_local = OllamaLLM(model="llama3")
 console = Console()
+
+def verificar_conexao():
+    """Verifica se o serviço do Ollama está ativo antes de iniciar"""
+    try:
+        urllib.request.urlopen("http://localhost:11434", timeout=2)
+    except Exception:
+        console.print("[bold red]Eve: Erro: Não consegui detectar o Ollama rodando. Por favor, abra o aplicativo e tente novamente.[/bold red]")
+        sys.exit(0)
+
+# Executa a verificação antes de carregar 
+verificar_conexao()
+   
 
 dados_da_sessao = {
     "data_hora_inicio": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
