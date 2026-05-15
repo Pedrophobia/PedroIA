@@ -1,4 +1,3 @@
-<img width="1919" height="787" alt="Captura de tela 2026-05-15 141717" src="https://github.com/user-attachments/assets/b70feafe-0070-4560-bc84-ee59e6a87538" />
 # Eve 
 
 **Eve** é uma assistente virtual local de programação, que roda 100% na sua máquina utilizando modelos de linguagem via [Ollama](https://ollama.com/). Sem nuvem, sem custos de API, sem envio de dados.
@@ -105,3 +104,4 @@ Todo o processamento acontece localmente. Nenhuma mensagem ou imagem é enviada 
 
 - A memória da Eve é **por sessão** — ao reiniciar, o histórico começa do zero (os logs anteriores ficam salvos em JSON)
 - A funcionalidade de visão de tela (`olhe para a tela`) captura a tela no momento do comando, mas o modelo `llama3` padrão é somente texto. Para análise real de imagens, será necessário um modelo multimodal como o `llava`
+- <img width="1919" height="787" alt="Captura de tela 2026-05-15 141717" src="https://github.com/user-attachments/assets/b70feafe-0070-4560-bc84-ee59e6a87538" />
