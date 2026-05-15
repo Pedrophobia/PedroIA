@@ -1,3 +1,4 @@
+<img width="1919" height="787" alt="Captura de tela 2026-05-15 141717" src="https://github.com/user-attachments/assets/b70feafe-0070-4560-bc84-ee59e6a87538" />
 # Eve 
 
 **Eve** é uma assistente virtual local de programação, que roda 100% na sua máquina utilizando modelos de linguagem via [Ollama](https://ollama.com/). Sem nuvem, sem custos de API, sem envio de dados.
