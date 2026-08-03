@@ -1,0 +1,10 @@
+[
+    {"frase": "Olá, tudo bem?", "intencao": "conversa"},
+    {"frase": "Oi Eve", "intencao": "conversa"},
+    {"frase": "Quem és tu?", "intencao": "conversa"},
+    
+    {"frase": "Corrige este código", "intencao": "ajuda_codigo"},
+    {"frase": "Como fazer um loop em python?", "intencao": "ajuda_codigo"},
+    {"frase": "O meu script está com erro", "intencao": "ajuda_codigo"},
+    {"frase": "Explica-me esta função", "intencao": "ajuda_codigo"}
+]

@@ -1,0 +1,22 @@
+{
+    "data_hora_inicio": "2026-08-03 09:11:05",
+    "modelo_utilizado": "ML_Local_+_Ollama_Offline",
+    "historico_conversa": [
+        {
+            "autor": "Usuário",
+            "mensagem": "me de um html simples (pagina em branco com um bom dia escrito)"
+        },
+        {
+            "autor": "Eve",
+            "mensagem": "HTML básico para uma página em branco com \"Bom Dia!\":\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n\t<title>Bom Dia!</title>\n</head>\n<body>\n\t<h1>Bom Dia!</h1>\n</body>\n</html>\n```"
+        },
+        {
+            "autor": "Usuário",
+            "mensagem": "bye"
+        },
+        {
+            "autor": "Eve",
+            "mensagem": "Por que você fez isso? Queria um código e você me mandou \"bye\"?"
+        }
+    ]
+}
