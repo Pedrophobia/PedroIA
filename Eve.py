@@ -1,7 +1,11 @@
 import os
 import json
 import sys
+import time
 from datetime import datetime
+from prompt_toolkit import PromptSession
+from prompt_toolkit.key_binding import KeyBindings
+from prompt_toolkit.keys import Keys
 
 # Componentes visuais do terminal
 from rich.console import Console
@@ -12,6 +16,18 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from langchain_ollama import OllamaLLM
 
+# Configuração de atalhos: Enter = nova linha, Alt+Enter = enviar
+bindings = KeyBindings()
+
+@bindings.add(Keys.Enter)
+def _(event):
+    event.current_buffer.insert_text("\n")
+
+@bindings.add(Keys.ControlJ)  # Control+Enter é interpretado como Escape+Enter no terminal
+def _(event):
+    event.current_buffer.validate_and_handle()
+
+session = PromptSession(key_bindings=bindings)
 
 console = Console()
 
@@ -103,6 +119,7 @@ def processar_assistente(comando_usuario, historico_conversa):
     )
     
     resposta_ia = ""
+    inicio = time.time()
     
     # 3. Processa a resposta via Ollama com indicador de carregamento
     try:
@@ -113,9 +130,10 @@ def processar_assistente(comando_usuario, historico_conversa):
         if not resposta_ia or not resposta_ia.strip():
             console.print("[bold red]Eve: Não consegui gerar uma resposta. Tenta novamente.[/bold red]")
             return
+        tempo_gasto = time.time() - inicio
 
         # Exibe a resposta formatada
-        console.print("\n[bold magenta]Eve:[/bold magenta]")
+        console.print(f"\n[bold magenta]Eve:[/bold magenta] [dim](pensou por {tempo_gasto:.1f}s)[/dim]")
         console.print(Markdown(resposta_ia.strip()))
         
         # Atualiza o histórico e logs
@@ -133,7 +151,7 @@ def iniciar_programa():
     console.print("Eve: Olá. Como posso ajudar com o teu código hoje?")
     
     while True:
-        usuario = input("\nVocê: ")
+        usuario = session.prompt("\nVocê: ")
         
         if usuario.lower() in ["sair", "exit", "quit"]:
             console.print("[bold green]Eve: Até logo.[/bold green]")
