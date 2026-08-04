@@ -1,0 +1,14 @@
+{
+    "data_hora_inicio": "2026-08-04 18:52:28",
+    "modelo_utilizado": "llama3",
+    "historico_conversa": [
+        {
+            "autor": "Usuário",
+            "mensagem": "Kanye\n"
+        },
+        {
+            "autor": "Eve",
+            "mensagem": "O que você deseja fazer com o nome \"Kanye\"?"
+        }
+    ]
+}

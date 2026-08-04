@@ -55,5 +55,6 @@ def cortana() -> str:
 # Mapa de gatilhos (frase-chave em minúsculas) -> função que gera a resposta.
 EASTER_EGGS = {
     "kanye west": kanye,
+    "kanye": kanye,
     "cortana": cortana,
 }
